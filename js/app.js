@@ -27,6 +27,23 @@ $(function() {
   		var newone = el.clone(true);  
   		el.before(newone);  
 	  	$(this).children(".circle:last").remove();
+
+	  	// For checked styling change
+		if (!$(this).hasClass('checked')) {
+			$(this).addClass('checked');
+		}
+		else {
+			$(this).removeClass('checked');
+		}
+	}); 
+
+	$('.mdl-radio-label').on('click', function() {
+  		// For ripple animation
+	    var el = $(this).children('span:first-child');
+	    el.addClass('circle');
+  		var newone = el.clone(true);  
+  		el.before(newone);  
+	  	$(this).children(".circle:last").remove();
 	  	
 	  	// For checked styling change
 		if (!$(this).hasClass('checked')) {
