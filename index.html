@@ -91,8 +91,10 @@
         <form>
           <div class="row">
             <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
+              <div class="mdl mdl-with-label empty">
+                <label class="mdl-float-label">large-12.columns</label>
+                <input class="mdl-input" type="email" required/>
+              </div>
             </div>
           </div>
           <div class="row">
@@ -130,19 +132,46 @@
           <div class="row">
             <div class="large-6 medium-6 columns">
               <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed">
+              <label for="pokemonRed">
+                <span></span>
+                <span class="outer-circle"></span>
+                <span class="inner-circle"></span>
+                Radio 1
+              </label>
+              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
+              <label for="pokemonBlue">
+                <span></span>
+                <span class="outer-circle"></span>
+                <span class="inner-circle"></span>
+                Radio 2
+              </label>
             </div>
             <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+              <div class="mdl">
+                <label>Check these out</label>
+                <input class="mdl-checkbox" id="checkbox1" type="checkbox">
+                <label class="mdl-checkbox-label" for="checkbox1">
+                  <span></span>
+                  <span class="box"></span>
+                  Checkbox 1
+                </label>
+                <input class="mdl-checkbox" id="checkbox2" type="checkbox">
+                <label class="mdl-checkbox-label" for="checkbox2">
+                  <span></span>
+                  <span class="box"></span> 
+                  Checkbox 2
+                </label>
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
+              <div class="mdl mdl-with-label empty">
+                <label class="mdl-float-label">Textarea Label</label>
+                <textarea class="mdl-input"></textarea>
+              </div>
+              
             </div>
           </div>
         </form>
