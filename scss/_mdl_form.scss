@@ -116,7 +116,7 @@
 		}
 	}
 
-	.mdl-switch-checkbox:checked + .mdl-switch-checkbox-label {
+	.mdl-switch:checked + .mdl-switch-label {
 		background-color: rgba(63,81,181,.5);
 
 		&:after {
@@ -126,7 +126,7 @@
 		}
 	}
 
-	.mdl-switch-checkbox-label {
+	.mdl-switch-label {
 		height: rem-calc(14);
 		width: rem-calc(36);
 		background-color: rgba(0,0,0,.26);
