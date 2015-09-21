@@ -209,6 +209,28 @@
 	}
 }
 
+.mdl {
+	.mdl-select {
+		background-color: transparent;
+		border-width: rem-calc(0 0 1 0);
+		display: block;
+
+		&:focus {
+			outline: 0;
+		}
+	}
+
+	.mdl-select-label {
+		font-size: rem-calc(12);
+	}
+
+	&.focused {
+	  	.mdl-select-label {
+	  		color: #3f51b5;
+	  	}
+  }
+}
+
 
 @include keyframes(growCircle) {
   0%, 100%   { @include transform(scale(0)); }

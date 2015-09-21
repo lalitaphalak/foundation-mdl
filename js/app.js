@@ -60,4 +60,12 @@ $(function() {
 		return false; // To handle twice execution
 		
 	}); 
+
+	$(".mdl").on('focusin', ".mdl-select", function() {
+		$(this).parent().addClass('focused');
+	}); 
+
+	$(".mdl").on('focusout', ".mdl-select", function() {
+		$(this).parent().removeClass('focused');
+	});	
 });
