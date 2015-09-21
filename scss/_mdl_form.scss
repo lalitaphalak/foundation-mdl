@@ -32,6 +32,7 @@
 		font-size: rem-calc(16);
 		pointer-events: none;
 		display: block;
+		z-index: 1;
 		@include transition-property(all);
 	    @include transition-duration(.2s);
 		@include transition-timing-function(cubic-bezier(.4,0,.2,1));
@@ -229,6 +230,38 @@
 	  		color: #3f51b5;
 	  	}
   }
+}
+
+.mdl {
+	.mdl-postfix, .mdl-prefix {
+		background-color: transparent;
+		border-width: rem-calc(0 0 1 0);
+	}
+
+	.mdl-postfix-input, .mdl-prefix-input {
+		margin-bottom: 0;
+	}
+
+	&.focused  {
+		.mdl-postfix, .mdl-prefix {
+		border-bottom: 0;
+		}
+
+		&.empty .mdl-prefix-label.mdl-float-label {
+			text-align: left;
+			left: 0;
+		}	
+	}
+
+	&.mdl-postfix-wrapper {
+		display: inline-block;
+	}
+
+	&.empty .mdl-float-label.mdl-prefix-label {
+		right: 0;
+		text-align: right;
+		@include transition-duration(0s);
+	}
 }
 
 

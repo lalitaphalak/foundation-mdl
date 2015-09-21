@@ -4,19 +4,19 @@ $(document).foundation();
 
 $(function() {
 	$(".mdl").on('focusin', ".mdl-input", function() {
-		$(this).parent().addClass('focused');
+		$(this).closest('.mdl').addClass('focused');
 		if (!this.value) {
-			$(this).parent().addClass('empty');
+			$(this).closest('.mdl').addClass('empty');
 		}
 	});
 
 	$(".mdl").on('focusout', ".mdl-input", function() {
-		$(this).parent().removeClass('focused');
+		$(this).closest('.mdl').removeClass('focused');
 		if (this.value) {
-			$(this).parent().removeClass('empty');
+			$(this).closest('.mdl').removeClass('empty');
 		}
 		else {
-			$(this).parent().addClass('empty');
+			$(this).closest('.mdl').addClass('empty');
 		}
 	});
 
