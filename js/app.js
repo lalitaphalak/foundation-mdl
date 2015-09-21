@@ -37,7 +37,7 @@ $(function() {
 		}
 	}); 
 
-	$('.mdl-radio-label').on('click', function() {
+	$(".mdl").on('click', ".mdl-radio-label", function() {
   		// For ripple animation
 	    var el = $(this).children('span:first-child');
 	    el.addClass('circle');
@@ -46,11 +46,18 @@ $(function() {
 	  	$(this).children(".circle:last").remove();
 	  	
 	  	// For checked styling change
-		if (!$(this).hasClass('checked')) {
+	  	if ($(this).children('input.mdl-radio').length > 0) {
+	  		$(this).siblings( ".mdl-radio-label.checked" ).removeClass('checked');
+	  	}
+
+	  	if (!$(this).hasClass('checked')) {
 			$(this).addClass('checked');
 		}
 		else {
 			$(this).removeClass('checked');
 		}
+
+		return false; // To handle twice execution
+		
 	}); 
 });

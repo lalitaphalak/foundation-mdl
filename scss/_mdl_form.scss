@@ -126,6 +126,9 @@
 	.mdl-radio-label {
 		padding-left: rem-calc(20);
 		position: relative;
+		// Additional stylings for restructured UI
+		display: inline-block;
+		margin: rem-calc(0 16 0 8);
 
 		span {
 			display:block;
@@ -159,11 +162,11 @@
 		}
 
 		.inner-circle {
-			border:2px solid rgba(0,0,0,.54);
-			  height:rem-calc(14); 
-			  width:rem-calc(14);
+			  height:rem-calc(8); 
+			  width:rem-calc(8);
 			  position: absolute;
-			  top: rem-calc(2);
+			  top: rem-calc(6);
+			  left: rem-calc(4);
 			  @include border-radius(50%);
 			  @include transition-property(all);
 			  @include transition-duration(.2s);
@@ -173,6 +176,11 @@
 
 		&.checked .outer-circle{
 			border: 2px solid #3f51b5;
+		}
+
+		&.checked .inner-circle {
+			@include scale(1, 1, 1, false);
+			background-color: #3f51b5;
 		}
 	}
 }
