@@ -60,10 +60,11 @@
   }
 
   &.focused {
-  	&.empty .mdl-float-label {
+  	.mdl-float-label {
   		top: rem-calc(8);
   		font-size: rem-calc(12);
   		color: #3f51b5;
+  		display: block;
   	}
 
   	&:after {
@@ -73,6 +74,13 @@
   	}
   	
   }
+
+  .mdl-float-label {
+  		top: rem-calc(8);
+  		font-size: rem-calc(12);
+  		color: #3f51b5;
+  		display: block;
+  	}
 }
 
 .mdl {
