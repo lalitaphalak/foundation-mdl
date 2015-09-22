@@ -57,9 +57,6 @@ $(function() {
 		  	if (!$(this).hasClass('checked')) {
 				$(this).addClass('checked');
 			}
-			else {
-				$(this).removeClass('checked');
-			}
 		}
   		
 
