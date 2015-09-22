@@ -18,6 +18,10 @@
   		&:invalid {
   			border-bottom-color: red;
   		}
+
+  		&:disabled {
+  			background-color: transparent;
+  		}
 	}
 
 	.mdl-float-label  {

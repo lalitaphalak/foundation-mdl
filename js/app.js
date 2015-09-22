@@ -21,41 +21,47 @@ $(function() {
 	});
 
 	$('.mdl-checkbox-label').on('click', function() {
-  		// For ripple animation
-	    var el = $(this).children('span:first-child');
-	    el.addClass('circle');
-  		var newone = el.clone(true);  
-  		el.before(newone);  
-	  	$(this).children(".circle:last").remove();
+		var checkbox = document.getElementById($(this).attr('for'));
+		if ($(checkbox).is(':enabled')) {
+			// For ripple animation
+		    var el = $(this).children('span:first-child');
+		    el.addClass('circle');
+	  		var newone = el.clone(true);  
+	  		el.before(newone);  
+		  	$(this).children(".circle:last").remove();
 
-	  	// For checked styling change
-		if (!$(this).hasClass('checked')) {
-			$(this).addClass('checked');
-		}
-		else {
-			$(this).removeClass('checked');
-		}
+		  	// For checked styling change
+			if (!$(this).hasClass('checked')) {
+				$(this).addClass('checked');
+			}
+			else {
+				$(this).removeClass('checked');
+			}
+		}	
 	}); 
 
 	$(".mdl").on('click', ".mdl-radio-label", function() {
-  		// For ripple animation
-	    var el = $(this).children('span:first-child');
-	    el.addClass('circle');
-  		var newone = el.clone(true);  
-  		el.before(newone);  
-	  	$(this).children(".circle:last").remove();
-	  	
-	  	// For checked styling change
-	  	if ($(this).children('input.mdl-radio').length > 0) {
-	  		$(this).siblings( ".mdl-radio-label.checked" ).removeClass('checked');
-	  	}
+		if ($(this).children('input[type="radio"]').is(':enabled')) {
+			// For ripple animation
+		    var el = $(this).children('span:first-child');
+		    el.addClass('circle');
+	  		var newone = el.clone(true);  
+	  		el.before(newone);  
+		  	$(this).children(".circle:last").remove();
+		  	
+		  	// For checked styling change
+		  	if ($(this).children('input.mdl-radio').length > 0) {
+		  		$(this).siblings( ".mdl-radio-label.checked" ).removeClass('checked');
+		  	}
 
-	  	if (!$(this).hasClass('checked')) {
-			$(this).addClass('checked');
+		  	if (!$(this).hasClass('checked')) {
+				$(this).addClass('checked');
+			}
+			else {
+				$(this).removeClass('checked');
+			}
 		}
-		else {
-			$(this).removeClass('checked');
-		}
+  		
 
 		return false; // To handle twice execution
 		
